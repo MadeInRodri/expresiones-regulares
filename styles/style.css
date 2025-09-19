@@ -171,6 +171,9 @@ h5 {
 }
 
 @media (width < 768px) {
+  header {
+    height: auto;
+  }
   header,
   div {
     width: 90%;

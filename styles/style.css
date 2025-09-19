@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+header {
+  height: 5rem;
+
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 2.5rem;
+    color: #1d1a2f;
+  }
+
+  a {
+    color: #1d1a2f;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 2rem;
+}
+
+form {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .section-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  button {
+    margin-top: 1rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border: none;
+    background-color: #3f6d4e;
+    color: white;
+
+    display: flex;
+    align-items: center;
+  }
+  div {
+    width: 100%;
+  }
+}
+
+aside {
+  padding: 1rem;
+  background-color: #1d1a2f;
+  color: white;
+  height: min-content;
+
+  display: flex;
+  flex-direction: column;
+
+  section,
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    gap: 1rem;
+  }
+
+  article {
+    gap: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 0;
+  }
+
+  h4 {
+    font-size: 2rem;
+    color: #8bd450;
+  }
+
+  a {
+    color: #8bd450;
+    font-weight: 700;
+    text-decoration: none;
+    list-style: circle;
+  }
+
+  a:hover {
+    color: #74b143;
+  }
+}
+
+footer {
+  background-color: #1d1a2f;
+  color: white;
+  width: 100%;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h4 {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 3rem;
+  }
+
+  .texto-estudiante {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  a {
+    color: #8bd450;
+  }
+}
+
+picture,
+img {
+  width: 100%;
+}
+
+header,
+div {
+  width: 80%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+@media (width < 768px) {
+  header,
+  div {
+    width: 90%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+
+    h1 {
+      align-self: baseline;
+    }
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (width < 576px) {
+  main {
+    .section-text {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

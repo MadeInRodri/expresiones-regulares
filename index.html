@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Expresiones Regulares</title>
+  </head>
+  <body>
+    <header>
+      <h1>Expresiones regulares</h1>
+      <ul>
+        <li><a href="#validacion">Validación</a></li>
+        <li><a href="#coincidencias">Coincidencias</a></li>
+      </ul>
+    </header>
+    <div class="main-container">
+      <main>
+        <section id="validacion">
+          <div class="section-text">
+            <h3>Expresiones regulares usadas para validar un formulario</h3>
+            <picture>
+              <img
+                src="https://res.cloudinary.com/diogirqun/image/upload/v1758245004/pexels-tara-winstead-8850706_pfjjie.jpg"
+                alt="End of Evangelion"
+                title="End of Evangelion"
+              />
+            </picture>
+            <div>
+              <p>
+                Podemos validar un formulario de una manera mucho más
+                personalizada si ocupamos expresiones regulares puesto que estas
+                nos permiten reconocer cualquier patrón, así al no activarse la
+                expresión regular significaría que el usuario aún no ha
+                ingresado un texto válido.
+              </p>
+            </div>
+            <form class="border rounded-3 p-2">
+              <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" />
+                <span class="form-text text-danger" id="span-nombre"></span>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" />
+                <span class="form-text text-danger" id="span-email"></span>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Edad</label>
+                <input type="number" class="form-control w-auto" id="edad" />
+                <span class="form-text text-danger" id="span-edad"> </span>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="text" class="form-control" id="contrasenia" />
+                <span class="form-text text-danger" id="span-contrasenia">
+                </span>
+              </div>
+
+              <button type="button" class="btn btn-success" id="enviar">
+                Enviar
+              </button>
+            </form>
+          </div>
+        </section>
+        <section id="coincidencias">
+          <div class="section-text">
+            <h3>
+              Expresiones regulares usadas para encontrar coincidencias en
+              textos
+            </h3>
+            <picture>
+              <img
+                src="https://res.cloudinary.com/diogirqun/image/upload/v1758245017/pexels-pixabay-261763_xsu9av.jpg"
+                alt="Rei Ayanami"
+                title="Rei Ayanami"
+              />
+            </picture>
+            <p>
+              Una forma muy útil para el uso de expresiones regulares es el
+              contar las palabras que coinciden con nuestra expresión dentro de
+              un texto cualquiera, a modo de análisis.
+            </p>
+            <h2>Algunos ejemplos:</h2>
+
+            <div class="border p-3 rounded-3">
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="texto1"
+                  style="height: 100px"
+                  disabled
+                >
+La rata ingrata, ingrata rata en una lata guardó la plata y la pobre rata, por insensata, quedó sin la plata y sin la lata.</textarea
+                >
+                <label for="floatingTextarea2">Trabalenguas</label>
+              </div>
+              <div class="form-floating">
+                <select
+                  class="form-select"
+                  id="select-texto1"
+                  aria-label="Floating label select example"
+                >
+                  <option selected>Rata</option>
+                  <option>Ingrata</option>
+                  <option>Plata</option>
+                </select>
+                <label for="floatingSelect">Palabra que desea buscar</label>
+                <span class="text-primary" id="span-texto1"></span>
+              </div>
+              <button class="btn btn-success" id="btn-texto1">
+                Encontrar coincidencias
+              </button>
+            </div>
+
+            <div class="border p-3 rounded-3">
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="texto2"
+                  style="height: 100px"
+                  disabled
+                >
+Quiero y no quiero querer a quien no queriendo quiero. He querido sin querer y estoy sin querer queriendo. Si por mucho que te quiero, quieres que te quiera más, te quiero más que me quieres. ¿Qué más quieres? ¿Quieres más?</textarea
+                >
+                <label for="floatingTextarea2">Trabalenguas</label>
+              </div>
+              <div class="form-floating">
+                <select
+                  class="form-select"
+                  id="select-texto2"
+                  aria-label="Floating label select example"
+                >
+                  <option selected>Quiero</option>
+                  <option>Querer</option>
+                  <option>Más</option>
+                </select>
+                <label for="floatingSelect">Palabra que desea buscar</label>
+                <span class="text-primary" id="span-texto2"></span>
+              </div>
+              <button class="btn btn-success" id="btn-texto2">
+                Encontrar coincidencias
+              </button>
+            </div>
+
+            <h2>Pruebelo usted mismo:</h2>
+            <div class="border p-3 rounded-3">
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="texto3"
+                  style="height: 100px"
+                ></textarea>
+                <label for="floatingTextarea2"
+                  >Ingrese un texto cualquiera:</label
+                >
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="input-texto3"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput"
+                  >Ingrese la palabra que desea buscar:</label
+                >
+                <span class="text-primary" id="span-texto3"></span>
+              </div>
+              <button class="btn btn-success" id="btn-texto3">
+                Encontrar coincidencias
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <aside>
+        <section>
+          <h4>Regex</h4>
+          <article>
+            <h5>¿Que es una regex?</h5>
+            <p>
+              Es una secuencia de caracteres que define un patrón de búsqueda.
+              Este patrón es usado para encontrar coincidencias dentro de
+              cadenas, ayudarte a identificar texto específico o patrones de
+              caracteres, proveyendo una forma poderosa de buscar, reemplazar, y
+              manipular texto.
+            </p>
+          </article>
+        </section>
+        <section>
+          <article class="last-article">
+            <h5>Pruebe sus regex:</h5>
+            <p>
+              Existen muchas páginas para poder testear nuestras expresiones
+              regulares y poder armarlas de una manera más visual, aquí el link
+              a algunas de ellas:
+            </p>
+            <ul>
+              <li>
+                <a href="https://regexr.com" target="_blank">RegexR</a>
+              </li>
+              <li>
+                <a href="https://regex101.com" target="_blank">Regex101</a>
+              </li>
+              <li>
+                <a href="https://www.regexpal.com" target="_blank">RegexPal</a>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </aside>
+    </div>
+    <footer>
+      <section>
+        <h4>¡Ha llegado hasta el final!</h4>
+      </section>
+      <section class="texto-estudiante">
+        <article>
+          <h5>Página hecha por:</h5>
+          <p>Rodrigo Mejía MR230247</p>
+        </article>
+      </section>
+    </footer>
+  </body>
+  <script src="./scripts/script.js"></script>
+</html>
